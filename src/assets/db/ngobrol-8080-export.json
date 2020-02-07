@@ -1,0 +1,173 @@
+{
+  "messages" : {
+    "2wjEHlhnuFh2di7sjEuoSjvnRBu2" : {
+      "isRegister" : true
+    },
+    "5myp7wSu1lVqGzbU8mgRQdzVDc32" : {
+      "isRegister" : true
+    },
+    "G4mKPRTDsCdZLgKARgszTPPauNn1" : {
+      "isRegister" : true
+    },
+    "Vbw2pF5Y0sRPUhZiKrNMx2bE41q2" : {
+      "isRegister" : true
+    },
+    "bFXa2QjEpOa6jwJ4RDG4J1gOX793" : {
+      "isRegister" : true
+    },
+    "bGFDCe4Fu8hSMe13mj7nraiQiSE2" : {
+      "isRegister" : true
+    },
+    "mTK3bhSF8ENaNjkbmYHyicOkN1b2" : {
+      "friendList" : {
+        "oUAQX7xs6PMBFRkO8SQgxZDJOxO2" : {
+          "data" : {
+            "-LxE-b8cadWcH-QZRhNh" : {
+              "incoming" : false,
+              "message" : "Hi..."
+            },
+            "-LxE-l2nfCFLmNlFnYVU" : {
+              "incoming" : true,
+              "message" : "Hi Juga yusuf"
+            },
+            "-LxE-n2gHdd0gubX8hWv" : {
+              "incoming" : false,
+              "message" : "Apa kabar erdin ?"
+            },
+            "-LxE-ph5YYYtqMeZxKkY" : {
+              "incoming" : true,
+              "message" : "Baik Baik Saja terimakasih"
+            },
+            "-LxE-rKj5sg3FahzO3Lj" : {
+              "incoming" : false,
+              "message" : "sama Sama"
+            }
+          }
+        },
+        "qnbv6eGZnjdA51sQxr8uyuXEXdH3" : {
+          "data" : {
+            "-LxDwgzuacHrX-puHPSe" : {
+              "incoming" : true,
+              "message" : "Hi..."
+            }
+          }
+        }
+      },
+      "isRegister" : true
+    },
+    "nL91FCsL5EVaTN88qJ6uXIxUBa43" : {
+      "isRegister" : true
+    },
+    "oUAQX7xs6PMBFRkO8SQgxZDJOxO2" : {
+      "friendList" : {
+        "mTK3bhSF8ENaNjkbmYHyicOkN1b2" : {
+          "data" : {
+            "-LxE-bHx7Hln9ycXb6Zr" : {
+              "incoming" : true,
+              "message" : "Hi..."
+            },
+            "-LxE-kziVeVDQrYbKo-h" : {
+              "incoming" : false,
+              "message" : "Hi Juga yusuf"
+            },
+            "-LxE-n7gjNVu--tdaCHW" : {
+              "incoming" : true,
+              "message" : "Apa kabar erdin ?"
+            },
+            "-LxE-pda5KdiyCeyUFyQ" : {
+              "incoming" : false,
+              "message" : "Baik Baik Saja terimakasih"
+            },
+            "-LxE-rdiXLOL7e6p5ddA" : {
+              "incoming" : true,
+              "message" : "sama Sama"
+            }
+          }
+        }
+      },
+      "isRegister" : true
+    },
+    "qnbv6eGZnjdA51sQxr8uyuXEXdH3" : {
+      "friendList" : {
+        "mTK3bhSF8ENaNjkbmYHyicOkN1b2" : {
+          "data" : {
+            "-LxDwgr8Qxd-loUG4ckL" : {
+              "incoming" : false,
+              "message" : "Hi..."
+            }
+          }
+        }
+      },
+      "isRegister" : true
+    }
+  },
+  "users" : {
+    "2wjEHlhnuFh2di7sjEuoSjvnRBu2" : {
+      "displayName" : "Tatas",
+      "email_users" : "me.milkovich@gmail.com",
+      "latitude" : -6.606448,
+      "longitude" : 106.810731,
+      "phoneNumber" : "081295886533",
+      "uid_users" : "2wjEHlhnuFh2di7sjEuoSjvnRBu2"
+    },
+    "5myp7wSu1lVqGzbU8mgRQdzVDc32" : {
+      "displayName" : "Syifa Mohammad Naufal",
+      "email_users" : "naufal@gmail.com",
+      "latitude" : "-6.606448",
+      "longitude" : "106.810731",
+      "phoneNumber" : "085674357964",
+      "uid_users" : "5myp7wSu1lVqGzbU8mgRQdzVDc32"
+    },
+    "G4mKPRTDsCdZLgKARgszTPPauNn1" : {
+      "displayName" : "Muhammad Douglas Jauhar",
+      "email_users" : "edo@gmail.com",
+      "latitude" : "-6.610498",
+      "longitude" : "106.803736",
+      "phoneNumber" : "08766983792",
+      "uid_users" : "G4mKPRTDsCdZLgKARgszTPPauNn1"
+    },
+    "Vbw2pF5Y0sRPUhZiKrNMx2bE41q2" : {
+      "email_users" : "fadel@gmail.com",
+      "latitude" : -6.610498,
+      "longitude" : 106.803736,
+      "uid_users" : "Vbw2pF5Y0sRPUhZiKrNMx2bE41q2"
+    },
+    "bGFDCe4Fu8hSMe13mj7nraiQiSE2" : {
+      "email_users" : "milkovich2715@gmail.com",
+      "latitude" : -6.610498,
+      "longitude" : 106.803736,
+      "uid_users" : "bGFDCe4Fu8hSMe13mj7nraiQiSE2"
+    },
+    "mTK3bhSF8ENaNjkbmYHyicOkN1b2" : {
+      "displayName" : "Yusuf Abdillah putra",
+      "email_users" : "yusufabdillahputra@gmail.com",
+      "photoUrl" : "https://lh3.googleusercontent.com/a-/AAuE7mC2carLQlW0wX_7jTZo1bm7t2TBZWE9ipQztCdo=s96-c",
+      "status" : "Online",
+      "uid_users" : "mTK3bhSF8ENaNjkbmYHyicOkN1b2"
+    },
+    "nL91FCsL5EVaTN88qJ6uXIxUBa43" : {
+      "displayName" : "fake account",
+      "email_users" : "coba@gmail.com",
+      "latitude" : "000",
+      "longitude" : "000",
+      "phoneNumber" : "087723641490",
+      "uid_users" : "nL91FCsL5EVaTN88qJ6uXIxUBa43"
+    },
+    "oUAQX7xs6PMBFRkO8SQgxZDJOxO2" : {
+      "displayName" : "Erdin Suharyadi",
+      "email_users" : "erdin@gmail.com",
+      "latitude" : "-6.610793",
+      "longitude" : "106.812212",
+      "phoneNumber" : "08217907379",
+      "uid_users" : "oUAQX7xs6PMBFRkO8SQgxZDJOxO2"
+    },
+    "qnbv6eGZnjdA51sQxr8uyuXEXdH3" : {
+      "displayName" : "Teguh Setiawan",
+      "email_users" : "teguh@gmail.com",
+      "latitude" : "-6.611544",
+      "longitude" : "106.813532",
+      "phoneNumber" : "08217191976",
+      "uid_users" : "qnbv6eGZnjdA51sQxr8uyuXEXdH3"
+    }
+  }
+}
