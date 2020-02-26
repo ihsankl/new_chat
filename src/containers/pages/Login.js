@@ -76,11 +76,13 @@ class Login extends Component {
           .equalTo(username)
           .once('value', async snapshot => {
             if (snapshot.val() !== null) {
+              const userID = Object.values(snapshot.val())[0].userid;
               const user = Object.entries(snapshot.val())[0];
-              var index = user.find(item => item.username === username);
+              const index = user.find(item => item.username === username);
               if (user) {
                 if (Password === index.password) {
                   await AsyncStorage.setItem('username', index.username);
+                  await AsyncStorage.setItem('userID', userID);
                   this.props.navigation.navigate('Mainapp');
                 } else {
                   alert('Wrong password!');

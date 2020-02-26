@@ -10,6 +10,9 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Foundation from 'react-native-vector-icons/Foundation';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import AsyncStorage from '@react-native-community/async-storage';
+import AwesomeAlert from 'react-native-awesome-alerts';
+import firebase from 'react-native-firebase';
+import {withNavigation} from 'react-navigation';
 
 const styles = {
   footerContent: {
@@ -74,37 +77,46 @@ const styles = {
   },
 };
 
-const data = [
-  {
-    id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-    title: 'First Item',
-  },
-  {
-    id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
-    title: 'Second Item',
-  },
-  {
-    id: '58694a0f-3da1-471f-bd96-145571e29d72',
-    title: 'Third Item',
-  },
-];
-
-export default class Main extends Component {
+class Main extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       firstQuery: '',
+      isLoading: false,
+      data: [],
+      myUserID: '',
+      myUsername: '',
     };
   }
 
   async componentDidMount() {
-    const user = await AsyncStorage.getItem('username');
-    console.log(user);
+    this.fierUp();
   }
+
+  fierUp = async () => {
+    this.setState({isLoading: true});
+    const user = await AsyncStorage.getItem('username');
+    const userID = await AsyncStorage.getItem('userID');
+    const ref = firebase.database().ref('users/');
+    try {
+      ref.once('value', snapshot => {
+        this.setState({
+          data: Object.values(snapshot.val()),
+          myUserID: userID,
+          myUsername: user,
+        });
+      });
+    } catch (error) {
+      console.log(error);
+    }
+
+    this.setState({isLoading: false});
+  };
 
   handleLogout = async () => {
     await AsyncStorage.removeItem('username');
+    await AsyncStorage.removeItem('userID');
     this.props.navigation.navigate('AuthNav');
   };
 
@@ -154,28 +166,33 @@ export default class Main extends Component {
           {/* real main content */}
           <View style={styles.flex}>
             <FlatList
-              data={data}
-              renderItem={({item}) => (
-                <TouchableOpacity
-                  onPress={() => this.props.navigation.navigate('Chat')}>
-                  <View style={styles.item}>
-                    <View style={styles.friendAvatar}>
-                      <FitImage
-                        style={styles.flex}
-                        source={require('../../assets/img/myFile.jpg')}
-                      />
+              data={this.state.data}
+              renderItem={({item}) =>
+                item.userid === this.state.myUserID ? (
+                  <></>
+                ) : (
+                  <TouchableOpacity
+                    onPress={() =>
+                      this.props.navigation.navigate('Chat', {
+                        receiver: item.username,
+                        receiverID: item.userid,
+                      })
+                    }>
+                    <View style={styles.item}>
+                      <View style={styles.friendAvatar}>
+                        <FitImage
+                          style={styles.flex}
+                          source={require('../../assets/img/myFile.jpg')}
+                        />
+                      </View>
+                      <View style={styles.secondContent}>
+                        <Text>{item.username}</Text>
+                      </View>
                     </View>
-                    <View style={styles.secondContent}>
-                      <Text>{item.title}</Text>
-                      <Text style={styles.secondContentColor}>asd</Text>
-                    </View>
-                    <View style={{marginLeft: wp('10%')}}>
-                      <Text>5 min</Text>
-                    </View>
-                  </View>
-                </TouchableOpacity>
-              )}
-              keyExtractor={item => item.id}
+                  </TouchableOpacity>
+                )
+              }
+              keyExtractor={item => item.username}
             />
           </View>
           {/* end real main content */}
@@ -193,8 +210,18 @@ export default class Main extends Component {
             </View>
           </View>
         </View>
+        <AwesomeAlert
+          show={this.state.isLoading}
+          title="Loading"
+          showProgress={true}
+          closeOnTouchOutside={false}
+          closeOnHardwareBackPress={false}
+        />
         {/* end main content */}
       </View>
     );
   }
 }
+
+const MainOri = withNavigation(Main);
+export default MainOri;

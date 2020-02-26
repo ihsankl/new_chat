@@ -93,11 +93,13 @@ export default class Login extends Component {
                 alert('username already taken!');
                 this.setState({isLoading: false});
               } else {
-                const ref = firebase.database().ref('users/' + this.makeid(10));
+                let userid = this.makeid(10);
+                const ref = firebase.database().ref('users/' + userid);
                 try {
                   await ref.set({
                     username,
                     password,
+                    userid,
                   });
                   this.setState({isLoading: false});
                   this.props.navigation.navigate('Login');
